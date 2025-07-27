@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Bienestar Emocional vs. Salud Mental</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .interactive-btn {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .interactive-btn:hover {
+            transform: scale(1.05);
+        }
+        .tooltip {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .interactive-btn:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-backdrop {
+            transition: opacity 0.3s ease-in-out;
+        }
+        .modal-content {
+            transition: transform 0.3s ease-in-out;
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-6 md:p-8">
+
+    <div class="max-w-7xl mx-auto">
+        <!-- Título principal -->
+        <header class="text-center mb-10 md:mb-16 fade-in">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Bienestar Emocional vs. Salud Mental</h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">A menudo se confunden, pero entender su diferencia es el primer paso para un bienestar integral. ¡Exploremos juntos!</p>
+        </header>
+
+        <!-- Contenedor principal de las tarjetas -->
+        <main class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 fade-in" style="animation-delay: 0.2s;">
+
+            <!-- Tarjeta de Salud Mental -->
+            <article class="card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="bg-blue-100 p-3 rounded-full mr-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m-3.5 14.5a3 3 0 01-3-3m3 3a3 3 0 003-3m-3 3V3m0 18a3 3 0 01-3-3m3-3a3 3 0 013-3m-3-3V3"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-blue-800">Salud Mental</h2>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">Un estado completo de bienestar <strong>psicológico, social y emocional</strong>. Es la base sobre la que construimos nuestra vida y afrontamos sus desafíos.</p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="interactive-btn bg-blue-50 p-3 rounded-lg text-center">
+                        <h3 class="font-semibold text-blue-700">Alcance Amplio</h3>
+                        <div class="tooltip w-48 bg-gray-800 text-white text-xs rounded-lg py-2 px-3">
+                            Abarca cómo pensamos, actuamos y nos relacionamos. ¡Es multidimensional!
+                        </div>
+                    </div>
+                    <div class="interactive-btn bg-blue-50 p-3 rounded-lg text-center">
+                        <h3 class="font-semibold text-blue-700">Objetivo Principal</h3>
+                        <div class="tooltip w-48 bg-gray-800 text-white text-xs rounded-lg py-2 px-3">
+                            Prevenir y tratar condiciones, y afrontar los problemas de la vida.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="font-semibold text-gray-700 mb-3">Factores Influyentes:</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Biología y genes</span></li>
+                        <li class="flex items-center"><span class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Experiencias de vida</span></li>
+                        <li class="flex items-center"><span class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Historia familiar</span></li>
+                        <li class="flex items-center"><span class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Estilo de vida</span></li>
+                    </ul>
+                </div>
+            </article>
+
+            <!-- Tarjeta de Bienestar Emocional -->
+            <article class="card p-6 md:p-8 flex flex-col">
+                <div class="flex items-center mb-4">
+                    <div class="bg-purple-100 p-3 rounded-full mr-4">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h2 class="text-3xl font-bold text-purple-800">Bienestar Emocional</h2>
+                </div>
+                <p class="text-gray-600 mb-6 flex-grow">La <strong>habilidad</strong> de reconocer, gestionar y expresar tus emociones de forma constructiva. Es florecer, no solo sobrevivir.</p>
+
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="interactive-btn bg-purple-50 p-3 rounded-lg text-center">
+                        <h3 class="font-semibold text-purple-700">Enfoque Específico</h3>
+                        <div class="tooltip w-52 bg-gray-800 text-white text-xs rounded-lg py-2 px-3">
+                            Se centra en la gestión y experiencia de tus sentimientos. ¿Cómo te sientes y qué haces con ello?
+                        </div>
+                    </div>
+                    <div class="interactive-btn bg-purple-50 p-3 rounded-lg text-center">
+                        <h3 class="font-semibold text-purple-700">Objetivo Principal</h3>
+                        <div class="tooltip w-52 bg-gray-800 text-white text-xs rounded-lg py-2 px-3">
+                            Cultivar un estado de armonía y confianza ante los altibajos de la vida.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-auto">
+                    <h3 class="font-semibold text-gray-700 mb-3">Habilidades a Cultivar:</h3>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><span class="bg-purple-200 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Autoconocimiento</span></li>
+                        <li class="flex items-center"><span class="bg-purple-200 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Regulación emocional</span></li>
+                        <li class="flex items-center"><span class="bg-purple-200 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Creencias y autoestima</span></li>
+                        <li class="flex items-center"><span class="bg-purple-200 text-purple-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">Mindfulness</span></li>
+                    </ul>
+                </div>
+            </article>
+        </main>
+        
+        <!-- Botón para ver la comparativa -->
+        <div class="text-center mt-10 md:mt-16 fade-in" style="animation-delay: 0.4s;">
+            <button id="openModalBtn" class="bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                Ver Comparativa Detallada
+            </button>
+        </div>
+
+        <!-- Mensaje final -->
+         <footer class="text-center mt-12 md:mt-16 pt-8 border-t border-gray-200 fade-in" style="animation-delay: 0.6s;">
+            <p class="text-xl font-semibold text-gray-800 max-w-2xl mx-auto">"La salud mental es el <span class="text-blue-600">QUÉ</span>, el bienestar emocional es el <span class="text-purple-600">CÓMO</span>."</p>
+            <p class="text-gray-600 mt-2">Cuidar tu bienestar emocional es la forma más proactiva de fortalecer tu salud mental.</p>
+        </footer>
+    </div>
+
+    <!-- Modal con la tabla comparativa -->
+    <div id="comparisonModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden modal-backdrop">
+        <div class="bg-white rounded-2xl shadow-2xl w-full max-w-4xl p-6 md:p-8 relative modal-content transform scale-95">
+            <button id="closeModalBtn" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6">Diferencias Clave</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="p-3 md:p-4 text-sm font-semibold text-gray-500 uppercase">Aspecto</th>
+                            <th class="p-3 md:p-4 text-sm font-semibold text-blue-600 uppercase">Salud Mental</th>
+                            <th class="p-3 md:p-4 text-sm font-semibold text-purple-600 uppercase">Bienestar Emocional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-3 md:p-4 font-bold">Alcance</td>
+                            <td class="p-3 md:p-4 text-gray-700">Multidimensional (emocional, psicológico, social)</td>
+                            <td class="p-3 md:p-4 text-gray-700">Gestión y experiencia de las emociones</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 bg-gray-50">
+                            <td class="p-3 md:p-4 font-bold">Enfoque Principal</td>
+                            <td class="p-3 md:p-4 text-gray-700">Cómo se piensa, procesa la información y se toman decisiones</td>
+                            <td class="p-3 md:p-4 text-gray-700">Cómo se reconocen, expresan y manejan los sentimientos</td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-3 md:p-4 font-bold">Manifestación de Problemas</td>
+                            <td class="p-3 md:p-4 text-gray-700">Afecta el funcionamiento general (sueño, alimentación, aislamiento)</td>
+                            <td class="p-3 md:p-4 text-gray-700">Impacta el manejo de sentimientos (ej. frustración)</td>
+                        </tr>
+                         <tr class="border-b border-gray-100 bg-gray-50">
+                            <td class="p-3 md:p-4 font-bold">Objetivo Principal</td>
+                            <td class="p-3 md:p-4 text-gray-700">Prevenir y tratar condiciones, afrontar problemas</td>
+                            <td class="p-3 md:p-4 text-gray-700">Cultivar un estado de armonía y confianza</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Lógica para el modal
+        const openModalBtn = document.getElementById('openModalBtn');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const modal = document.getElementById('comparisonModal');
+        const modalBackdrop = modal.querySelector('.modal-backdrop');
+        const modalContent = modal.querySelector('.modal-content');
+
+        const openModal = () => {
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modalContent.style.transform = 'scale(1)';
+            }, 10);
+        };
+
+        const closeModal = () => {
+            modalContent.style.transform = 'scale(0.95)';
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        };
+
+        openModalBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        // Cerrar modal al hacer clic fuera del contenido
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Cerrar modal con la tecla Escape
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
